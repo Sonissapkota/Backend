@@ -2,21 +2,22 @@ const http = require("http");
 const url = require("url");
 
 const myServer = http.createServer((req, res)=>{
-    if(req.url === "./faviconico") return res.end;
+    if(req.url === "/favicon.ico") return res.end();
     const myUrl = url.parse(req.url, true)
+    console.log(myUrl)
     switch(myUrl.pathname){
         case '/':
             res.end("Welcome to home page")
-        break
+            break
         case '/about':
             res.end("This is the about section")
-        break
+            break
         case '/search':
-            
-            res.end("This is the search section")
-        break
+            const username = myUrl.query.user
+            res.end(`Hello: ${username}`);
+            break
         default:
-            res.end("404")
+            res.end("404");
     }
 })
 
