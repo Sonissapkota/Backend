@@ -1,5 +1,5 @@
 const fs = require("fs");
-
+const os = require("os")
 // Sync
 // fs.writeFileSync('./test.txt', 'Hello world');
 
@@ -17,3 +17,4 @@ const fs = require("fs");
 // })
 
 fs.appendFileSync("./test.txt", 'Hey whatsapp up\n')
+console.log(os.cpus().length)
