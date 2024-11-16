@@ -1,0 +1,10 @@
+REST API - JSON
+
+GET /users - List all the users
+GET /users/1 - Get the users having the ID number 1
+GET /users/2 - Get the users having the ID number 2
+
+POST /users - create new users
+PATCH /users/1 -EDit the user with ID 1
+
+DELETE /users/1 the users with ID 1
